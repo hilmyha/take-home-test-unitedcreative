@@ -80,14 +80,14 @@ export default function CandleStick() {
 
   return (
     <Card className="overflow-hidden dark:bg-slate-950">
-      <CardHeader className="dark:bg-gray-700 -mt-6 pt-4 flex flex-row justify-between items-center">
-        <div className="flex gap-2 ">
+      <CardHeader className="dark:bg-gray-700 -mt-6 pt-4 flex flex-row justify-between">
+        <div className="flex gap-2">
           <p>Waktu</p>
-          <p>15M</p>
-          <p>1J</p>
-          <p>4J</p>
-          <p>1H</p>
-          <p>1M</p>
+          <p className="hidden md:block">15M</p>
+          <p className="hidden md:block">1J</p>
+          <p className="hidden md:block">4J</p>
+          <p className="hidden md:block">1H</p>
+          <p className="hidden md:block">1M</p>
         </div>
 
         <div className="flex gap-2 ">
@@ -96,7 +96,7 @@ export default function CandleStick() {
           <p>Kedalaman</p>
         </div>
       </CardHeader>
-      <CardDescription className="dark:bg-gray-700 -mt-6 px-6 py-2 flex flex-row justify-between items-center">
+      <CardDescription className="dark:bg-gray-700 -mt-6 px-6 py-3 flex flex-col lg:flex-row justify-between gap-1 lg:gap-4">
         <p>2025/02/05</p>
         <p>
           Buka: <span className="text-emerald-500">12227</span>

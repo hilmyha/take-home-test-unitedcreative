@@ -9,7 +9,7 @@ export function YearPicker({ selectedYear, onChange }: { selectedYear: number, o
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" className="w-[180px] justify-start text-left font-normal">
+        <Button variant="outline" className="w-full lg:w-fit justify-start text-left font-normal">
           <CalendarIcon className="mr-2" />
           {selectedYear}
         </Button>

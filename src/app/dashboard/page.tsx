@@ -17,7 +17,7 @@ export default function page() {
           <h2 className="font-semibold text-2xl">Welcome John Doe</h2>
           <p className="text-sm text-muted-foreground">how are you today?</p>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex lg:flex-row flex-col lg:items-center gap-4">
           <p>Filter by</p>
           <DatePicker />
         </div>

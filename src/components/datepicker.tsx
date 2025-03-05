@@ -9,7 +9,7 @@ export default function DatePicker() {
   const [year, setYear] = React.useState<number>(new Date().getFullYear());
 
   return (
-    <div className="flex space-x-2">
+    <div className="flex lg:flex-row flex-col gap-3">
       <MonthPicker selectedMonth={month} onChange={setMonth} />
       <YearPicker selectedYear={year} onChange={setYear} />
     </div>

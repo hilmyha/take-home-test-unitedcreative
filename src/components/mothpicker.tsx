@@ -14,7 +14,7 @@ export function MonthPicker({ selectedMonth, onChange }: { selectedMonth: number
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant="outline" className="w-[180px] justify-start text-left font-normal">
+        <Button variant="outline" className="w-full lg:w-fit justify-start text-left font-normal">
           <CalendarIcon className="mr-2" />
           {months[selectedMonth]}
         </Button>

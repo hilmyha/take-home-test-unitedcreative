@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <>
-      <Section className="px-5 flex items-center justify-between">
+      <Section className="px-5 flex lg:flex-row flex-col lg:items-center justify-between">
         <div>
           <h2 className="font-semibold text-2xl">Welcome John Doe</h2>
           <p className="text-sm text-muted-foreground">how are you today?</p>

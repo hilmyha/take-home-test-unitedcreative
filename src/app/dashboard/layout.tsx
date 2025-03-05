@@ -1,4 +1,5 @@
 import AppSidebar from "@/components/app-sidebar";
+import DashboardHeader from "@/components/dashboard-header";
 import {
   SidebarInset,
   SidebarProvider,
@@ -21,16 +22,22 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SidebarProvider suppressHydrationWarning>
-      <AppSidebar />
-      <SidebarInset>
-        <header className="z-50 flex sticky top-0 h-16 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-        </header>
-        <main className="font-[family-name:var(--font-roboto)]">
-          {children}
-        </main>
-      </SidebarInset>
-    </SidebarProvider>
+    <div
+      className="[--header-height:calc(theme(spacing.14))]"
+      suppressHydrationWarning
+    >
+      <SidebarProvider className="flex flex-col">
+        <DashboardHeader />
+        <div className="flex flex-1">
+          <AppSidebar />
+          <SidebarInset>
+            <main className="font-[family-name:var(--font-roboto)] flex flex-1 flex-col gap-4 p-4">
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarInset>
+        </div>
+      </SidebarProvider>
+    </div>
   );
 }

@@ -43,6 +43,12 @@ const data = [
     amount: "0.00000012",
     status: "Success",
   },
+  {
+    id: "DEPO-BTC-041213123413531",
+    asset: "BTC",
+    amount: "0.00000012",
+    status: "Success",
+  },
 ];
 
 export default function DepositDatatable() {

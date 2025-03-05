@@ -24,6 +24,7 @@ import {
   Wallet,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const items = [
   {
@@ -68,10 +69,16 @@ const items = [
   },
 ];
 
-export default function AppSidebar() {
+export default function AppSidebar({
+  ...props
+}: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
   return (
-    <Sidebar className="font-[family-name:var(--font-roboto)]">
+    <Sidebar
+      className="font-[family-name:var(--font-roboto)] fixed top-26 h-[calc(100vh-3.5rem)]"
+      {...props}
+      suppressHydrationWarning
+    >
       <SidebarHeader></SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
@@ -81,16 +88,18 @@ export default function AppSidebar() {
               return (
                 <SidebarMenuItem
                   key={item.title}
-                  className={isActive ? "text-yellow-600 dark:text-yellow-400" : ""}
+                  className={
+                    isActive ? "text-yellow-600 dark:text-yellow-400" : ""
+                  }
                 >
                   <SidebarMenuButton asChild>
-                    <a
+                    <Link
                       href={item.url}
                       className="flex items-center gap-2 p-2 rounded-md"
                     >
-                      <item.icon className="w-5 h-5" />
+                      <item.icon className={"w-5 h-5"} />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               );

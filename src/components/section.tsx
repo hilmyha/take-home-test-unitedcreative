@@ -6,5 +6,5 @@ interface SectionProps {
 }
 
 export default function Section({ children, className }: SectionProps) {
-  return <section className={`py-12 ${className}`}>{children}</section>;
+  return <section className={`py-8 ${className}`}>{children}</section>;
 }
